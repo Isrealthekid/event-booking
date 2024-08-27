@@ -3,12 +3,16 @@
 import { revalidatePath } from 'next/cache'
 
 import { connectToDatabase } from '@/lib/database'
-import User from '@/lib/database/models/user.model'
-import Order from '@/lib/database/models/order.model'
-import Event from '@/lib/database/models/event.model'
+// import User from '@/lib/database/models/user.model'
+// import Order from '@/lib/database/models/order.model'
+// import Event from '@/lib/database/models/event.model'
 import { handleError } from '@/lib/utils'
 
 import { CreateUserParams, UpdateUserParams } from '@/types'
+import User from '../models/user.models'
+import Order from '../models/order.model'
+import Event from '../models/event.model'
+
 
 export async function createUser(user: CreateUserParams) {
   try {
